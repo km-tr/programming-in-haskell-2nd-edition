@@ -4,5 +4,6 @@
 A.
 元々のproductと被るのでmyProductとする
 -}
+
 myProduct [] = 1
 myProduct (x:xs) = x * myProduct xs
