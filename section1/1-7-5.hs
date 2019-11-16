@@ -6,8 +6,8 @@ A.
 重複がなくなる
 -}
 
-qsortTest [] = []
-qsortTest (x:xs) = qsortTest smaller ++ [x] ++ qsortTest larger
-                       where
-                          smaller = [a | a <- xs, a < x]
-                          larger = [b | b <- xs, b > x]
+qsortTest []       = []
+qsortTest (x : xs) = qsortTest smaller ++ [x] ++ qsortTest larger
+ where
+  smaller = [ a | a <- xs, a < x ]
+  larger  = [ b | b <- xs, b > x ]
